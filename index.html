@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Item Search</title>
+	<link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+	<div class="rt">
+	<div class="container">
+		<h2>Menu</h2>
+		<div class="search-box">
+
+			<input type="text" id="search-input" placeholder="Search for items...">
+			<button type="submit" id="search-button">Search</button>
+
+			<label for="filter-select" style="color: aliceblue;">Filter:</label>
+  <select id="filter-select">
+    <option value="all">All</option>
+    <option value="vegetarian">Vegetarian</option>
+    <option value="non-vegetarian">Non-Vegetarian</option>
+  </select>
+
+		</div>
+		<ul class="list" id="item-list">
+			<li id="11" class="non-vegetarian" draggable="true"  data-value="455">Chicken and Cheese Burgers <br> price : 445</li>
+			<li id="12" class="vegetarian" draggable="true"  data-value="245">Veg and Cheese Burgers <br> price : 245</li>
+			<li id="13" class="non-vegetarian" draggable="true"  data-value="145">Egg Burgers <br> price : 145</li>
+			<li id="14" class="non-vegetarian" draggable="true"  data-value="125">Chicken pot pie <br> price : 125</li>
+			<li id="15" class="vegetarian" draggable="true"  data-value="453">Mashed potatoes <br> price : 453</li>
+			<li id="16" class="non-vegetarian" draggable="true"  data-value="432">Fried chicken <br> price : 432</li>
+			<li id="17" class="non-vegetarian" draggable="true"  data-value="875">Chicken soup <br> price : 875</li>
+			<li id="18" class="vegetarian" draggable="true"  data-value="315">Grilled cheese <br> price : 315</li>
+			<li id="19" class="non-vegetarian" draggable="true"  data-value="458">Chicken fingers/ nuggets <br> price : 458</li>
+			<li id="20" class="vegetarian" draggable="true"  data-value="155">Flatbread pizza <br> price : 155</li>
+		</ul>
+	</div>
+</div>
+
+
+
+
+
+<div class="lt">
+	<div class="container">
+		<h2>Tables</h2>
+		<div class="search-box1">
+			<input type="text" id="search-input1" placeholder="Search for tables...">
+			<button type="submit" id="search-button1">Search</button>
+		</div>
+		<ul class="list" id="item-list1">
+			<li class="table-item" id="1" data-table-id="1">Table 1 <br> Rs : 235 | Total Items : 2 </li>
+			<li class="table-item" id="2" data-table-id="2">Table 2 <br> Rs : 976 | Total Items : 4 </li>
+			<li class="table-item" id="3" data-table-id="3">Table 3 <br> Rs : 1235 | Total Items : 6 </li>
+			<li class="table-item" id="4" data-table-id="4">Table 4 <br> Rs : 835 | Total Items : 3 </li>
+			
+		</ul>
+	</div>
+</div>
+
+
+<div class="modal">
+	<div class="modal-content">
+	  <h2 id="abs">Table Orders</h2>
+	  <div class="table-orders"></div>
+	  <table > 
+		<thead>
+		  <tr>
+			<th>S No.</th>
+			<th>Items</th>
+			<th>Price</th>
+			<th>No. of Servings</th>
+		  </tr>
+		</thead>
+		<tbody>
+		  <tr>
+			<td>1</td>
+			<td>Chicken and Cheese Burgers</td>
+			<td>445.0</td>
+			<td><input type="number" min="0" value="1" onchange="updateTotalCost(1, this.value) "></td>
+		  </tr>
+		  <tr>
+			<td>2</td>
+			<td>Veg and Cheese Burgers</td>
+			<td>245.0</td>
+			<td><input type="number" min="0" value="1" onchange="updateTotalCost(2, this.value)"></td>
+		  </tr>
+		  <tr>
+			<td>3</td>
+			<td>Egg Burgers</td>
+			<td>145.0</td>
+			<td><input type="number" min="0" value="1" onchange="updateTotalCost(3, this.value)"></td>
+		  </tr>
+		</tbody>
+		<tfoot>
+		  <td colspan="3">Total</td>
+		  <td id="total-cost">835</td>
+		</tfoot>
+	  </table>
+  
+	  <button class="close-modal">Close Session (Generate Bill)</button>
+	</div>
+  </div>
+  
+
+
+
+	<script src="index.js">
+		
+	</script>
+</body>
+</html>
